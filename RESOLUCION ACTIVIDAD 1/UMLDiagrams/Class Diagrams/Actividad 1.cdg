@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Actividad 1">
+  <ClassDiagramComponents>
+    <Class name="Alumno" package="" visibility="public" xPosition="404.0" yPosition="543.0">
+      <Fields>
+        <Field name="idAlumno" type="int" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods/>
+    </Class>
+    <Class name="Materia" package="" visibility="public" xPosition="342.0" yPosition="324.0">
+      <Fields>
+        <Field name="idMateria" type="int" visibility="private"/>
+        <Field name="Nombre" type="String" visibility="private"/>
+        <Field name="Aprobadas" type="List" visibility="private"/>
+        <Field name="Cursadas" type="List" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods/>
+    </Class>
+    <Class name="Inscripcion" package="" visibility="public" xPosition="83.0" yPosition="420.0">
+      <Fields>
+        <Field name="idInscripcion" type="int" visibility="private"/>
+        <Field name="Alumno" type="Object" visibility="private"/>
+        <Field name="Materia" type="List" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="Aprobada" returnType="boolean" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="tiene un Alumno" source="Inscripcion" target="Alumno" type="Default" sourceCardinality="0..1" targetCardinality="1..1" collectionType="List"/>
+    <HasRelation name="tiene una Materia" source="Inscripcion" target="Materia" type="Default" sourceCardinality="0..1" targetCardinality="1..1" collectionType="List"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
